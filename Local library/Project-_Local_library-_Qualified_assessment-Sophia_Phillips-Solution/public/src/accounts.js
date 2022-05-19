@@ -14,7 +14,6 @@ function getTotalNumberOfBorrows(account, books)
   let borrows = books.reduce((totalBorrows, book) => {
     return totalBorrows + book.borrows.reduce((borrowByAccount, borrowedBook) => 
     {
-      console.log(borrowByAccount);
       return borrowedBook.id === account.id ? borrowByAccount + 1 : borrowByAccount;
     },0
     );
